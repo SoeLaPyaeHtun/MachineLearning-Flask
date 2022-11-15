@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    string[] result = (string[])ViewData["result"];
+}
+
+
+
+<form method="POST" action="methodOne">
+
+    <input type="text" id="num" name="num" placeholder="Enter Number" />
+    <input type="submit" />
+</form>
+
+@if (ViewData["result"] != null)
+    {
+        <h1>Your Input Number is @result[0]</h1>
+        <h1>perdition = @result[1]</h1>
+    }
+
