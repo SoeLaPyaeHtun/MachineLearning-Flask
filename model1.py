@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import accuracy_score
 
 #read data file
 df = pd.read_csv('Linear_Reg_Sales.csv')

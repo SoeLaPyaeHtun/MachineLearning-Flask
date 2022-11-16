@@ -8,8 +8,14 @@
 
   <ItemGroup>
     <None Remove="Newtonsoft.Json" />
+    <None Remove="Views\LogisticsRegression\" />
+    <None Remove="Views\TimeSeries\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\LogisticsRegression\" />
+    <Folder Include="Views\TimeSeries\" />
   </ItemGroup>
 </Project>

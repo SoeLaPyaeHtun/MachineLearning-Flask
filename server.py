@@ -16,7 +16,8 @@ df_time_series = pd.read_pickle('model2.pkl')
 class callModelOne(Resource):
     def get(self):
         xValue = request.args.get('x', type= int)
-        return {"result": str(modelOne.predict([[xValue]])[0])}
+        return {"result": str(modelOne.predict([[xValue]])[0]),
+        "accuracy_score": ""}
 
 
 class callModelTwo(Resource):
@@ -24,8 +25,8 @@ class callModelTwo(Resource):
         xValue = request.args.get('x', type= int)
         return {"result": str(df_time_series[xValue])}
 
-api.add_resource(callModelOne, "/model1", methods=['GET'])
-api.add_resource(callModelTwo, "/model2", methods=['GET'])
+api.add_resource(callModelOne, "/logReg", methods=['GET'])
+api.add_resource(callModelTwo, "/timeseries", methods=['GET'])
 
 
 # run the server
